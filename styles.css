@@ -23,7 +23,7 @@ body {
 }
 
 a { color: var(--navy); }
-a:focus-visible, .button:focus-visible, input:focus-visible, textarea:focus-visible {
+a:focus-visible, .button:focus-visible {
   outline: 2px solid var(--navy);
   outline-offset: 2px;
 }
@@ -86,7 +86,6 @@ h1 { margin: 0 0 16px; font-size: 54px; }
   color: var(--white);
   font: 600 16px var(--sans);
   text-decoration: none;
-  cursor: pointer;
 }
 .button:hover { background: var(--navy-dark); }
 .button-outline { background: var(--white); color: var(--navy); }
@@ -155,28 +154,11 @@ li { margin-bottom: 5px; }
 .about-grid p { margin: 0 0 12px; }
 
 /* Contact */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; }
-.contact-grid p { overflow-wrap: anywhere; }
-form { padding-top: 6px; }
-form label { display: block; margin-bottom: 5px; font-size: 15px; font-weight: 600; }
-form input, form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 18px;
-  padding: 10px 12px;
-  border: 1px solid #aab2bd;
-  border-radius: 2px;
-  background: var(--white);
-  color: var(--text);
-  font: 16px var(--sans);
-}
-.hidden-field { position: absolute; left: -9999px; }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.contact-grid p { margin: 0; overflow-wrap: anywhere; }
 
 /* Footer */
 .site-footer { padding: 24px 0; background: var(--navy); color: #dfe4ec; font-size: 14px; }
-
-/* Thank-you page */
-.thanks { min-height: 60vh; }
 
 /* Tablet and phone */
 @media (max-width: 760px) {
